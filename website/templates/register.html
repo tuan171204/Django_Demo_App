@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-    <h1>Register</h1>
+    <div class="col-md-12 offset-md-3 mb-5">
+        <div class="col-md-6 border border-2 shadow rounded-top-4 p-4" style="background-color: #FFF">
+            <div class="w-100 h-25 text-center">
+                <br>
+                <h2 class="fw-lighter"> <i><img src="{% static 'logo2.jpg' %}" style="height:100px"></i>Register </h2>
+                <br>
+            </div>
+            <br/>
+
+            <form method="POST" action="">
+                {% csrf_token %}
+
+                {{form.as_p}}
+
+                <br>
+                <button type="submit" class="btn rounded-0 form-control" style="background-color: rgb(242, 149, 68); color: white">Register</button>
+                    
+            </form>
+        </div>
+    </div>
+    <br>
 
 {% endblock %}

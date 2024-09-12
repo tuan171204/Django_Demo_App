@@ -1,0 +1,42 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-image: url(bgimage4.jpg);
+    z-index: 0;
+}
+
+.navbar a:hover {
+    background-color: #80471C;
+    color: #232323;
+    border-radius: 20%;
+    opacity: 80%;
+
+}
+
+.navbar-brand img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#logo:hover {
+    background-color: #ffffff00 !important;
+    opacity: 50%;
+}
+
+.navbar {
+    font-weight: bold;
+}
+
+.navbar a {
+    color: #FFF;
+    font-size: 18px;
+}
+
+
+
+.home-content {
+    opacity: 100%;
+}
