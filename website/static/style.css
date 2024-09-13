@@ -3,21 +3,22 @@
 }
 
 body {
-    background-image: url(bgimage4.jpg);
+    background-image: url(bgimage5.png);
     z-index: 0;
+    height: 1000px;
 }
 
 .navbar a:hover {
     background-color: #80471C;
-    color: #232323;
-    border-radius: 20%;
+    color: #FFF;
+    border-radius: 10%;
     opacity: 80%;
 
 }
 
 .navbar-brand img {
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 170px;
     border-radius: 50%;
 }
 
@@ -28,14 +29,13 @@ body {
 
 .navbar {
     font-weight: bold;
+    background-color: #c8954C;
 }
 
 .navbar a {
-    color: #FFF;
-    font-size: 18px;
+    color: Black;
+    font-size: 20px;
 }
-
-
 
 .home-content {
     opacity: 100%;

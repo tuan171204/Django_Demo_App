@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<h1> Hello World !!! </h1>
+
+{% else %}
+
+<div class="row offset-md-3 g-0 z-3 home-content">
+    <div id="carouselExampleSlidesOnly" class="col-md-3 col-xs-1 carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-start-4">
+        <div class="carousel-item active">
+            <img src="{% static 'cf1.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Django App</h5>
+                <p>Tuan Thai 9/2024</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'cf2.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Coffee Shop Management</h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'cf3.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Github - Repository</h5>
+                <p>https://github.com/tuan171204</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="col-md-6 border border-2 shadow rounded-end-4 p-0" style="background-color: #FFF">
+        <div class="w-100 h-25 rounded-top-4 pe-4 ps-4 text-center">
+            <br>
+            <h2 class="fw-lighter"> <i><img src="{% static 'logo5.jpg' %}" style="height:85px"></i>Login </h2>
+            <br>
+        </div>
+        
+
+        <form method="POST" action="{% url 'login' %}" class="pe-4 ps-4 mt-4">
+            {% csrf_token %}
+
+                <div class="mb-3">
+                    <i class="fa fa-user" style="color: #c8954C;"></i>
+                    <input type="text" class="form-control border-top-0 border-start-0 border-end-0 border-2" placeholder="Username" name="username" required>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <i class="fa fa-lock" style="color: #c8954C;"></i>
+                    <input type="password" class="form-control border-top-0 border-start-0 border-end-0 border-2" placeholder="Passsword" name="password" required>
+                </div>
+
+                <br>
+                <button type="submit" class="btn rounded-0 form-control" style="background-color: #c8954C; color: white">Login</button>
+        
+        <!-- REGISTER -->
+
+        <button type="button" class="btn mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <a class="icon-link icon-link-hover text-dark link-underline-light" href="{% url 'register' %}" id="register-link">
+                Haven't account yet ? Register
+                <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+            </a>
+        </button>
+        </form>
+    </div>
+    <div class="col-3"></div>
+</div>
+
+{% endif %}
+
+{% endblock %}
